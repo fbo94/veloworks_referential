@@ -1,0 +1,57 @@
+version: '3'
+
+services:
+  application:
+    container_name: referential-application
+    build:
+      context: .
+      dockerfile: docker/application/Dockerfile
+    depends_on:
+      - database
+    networks:
+      - application
+    volumes:
+      - .:/var/www:rw
+      - ./docker/application/xdebug.ini:/etc/php/8.2/mods-available/xdebug.ini
+    ports:
+      - 80:80
+      - 443:443
+    expose:
+      - 9000
+    extra_hosts:
+      host.docker.internal: host-gateway
+    privileged: true
+    cap_add:
+      - CAP_SYS_ADMIN
+      - CAP_NET_ADMIN
+      - CAP_DAC_READ_SEARCH
+  ###> doctrine/doctrine-bundle ###
+  database:
+    container_name: referential-database
+    restart: always
+    image: postgres:${POSTGRES_VERSION:-15}-alpine
+    networks:
+      application:
+        aliases:
+          - database
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-app}
+      # You should definitely change the password in production
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-!ChangeMe!}
+      POSTGRES_USER: ${POSTGRES_USER:-app}
+    ports:
+      - "5432:5432"
+    volumes:
+      - database_data:/var/lib/postgresql/data:rw
+      # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!
+      # - ./docker/db/data:/var/lib/postgresql/data:rw
+###< doctrine/doctrine-bundle ###
+
+volumes:
+###> doctrine/doctrine-bundle ###
+  database_data:
+###< doctrine/doctrine-bundle ###
+
+networks:
+  application:
+    name: veloworks-application
