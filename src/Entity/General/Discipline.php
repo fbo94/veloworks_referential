@@ -45,73 +45,46 @@ class Discipline
         $this->bikeTypes = new ArrayCollection();
     }
 
-    /**
-     * @return int
-     */
     public function getId(): int
     {
         return $this->id;
     }
 
-    /**
-     * @return string
-     */
     public function getLabel(): string
     {
         return $this->label;
     }
 
-    /**
-     * @param string $label
-     */
     public function setLabel(string $label): void
     {
         $this->label = $label;
     }
 
-    /**
-     * @return string
-     */
     public function getCode(): string
     {
         return $this->code;
     }
 
-    /**
-     * @param string $code
-     */
     public function setCode(string $code): void
     {
         $this->code = $code;
     }
 
-    /**
-     * @return string
-     */
     public function getDescription(): string
     {
         return $this->description;
     }
 
-    /**
-     * @param string $description
-     */
     public function setDescription(string $description): void
     {
         $this->description = $description;
     }
 
-    /**
-     * @return Collection
-     */
     public function getBikeTypes(): Collection
     {
         return $this->bikeTypes;
     }
 
-    /**
-     * @param Collection $bikeTypes
-     */
     public function setBikeTypes(Collection $bikeTypes): void
     {
         $this->bikeTypes = $bikeTypes;

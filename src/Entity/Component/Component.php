@@ -44,105 +44,66 @@ class Component
     #[ORM\Column(type: "float")]
     private ?float $indicativeWeight;
 
-    /**
-     * @return int
-     */
     public function getId(): int
     {
         return $this->id;
     }
 
-    /**
-     * @return string
-     */
     public function getName(): string
     {
         return $this->name;
     }
 
-    /**
-     * @param string $name
-     */
     public function setName(string $name): void
     {
         $this->name = $name;
     }
 
-    /**
-     * @return Type
-     */
     public function getType(): Type
     {
         return $this->type;
     }
 
-    /**
-     * @param Type $type
-     */
     public function setType(Type $type): void
     {
         $this->type = $type;
     }
 
-    /**
-     * @return string
-     */
     public function getDescription(): string
     {
         return $this->description;
     }
 
-    /**
-     * @param string $description
-     */
     public function setDescription(string $description): void
     {
         $this->description = $description;
     }
 
-    /**
-     * @return Collection
-     */
     public function getMaterials(): Collection
     {
         return $this->materials;
     }
 
-    /**
-     * @param Collection $materials
-     */
     public function setMaterials(Collection $materials): void
     {
         $this->materials = $materials;
     }
 
-    /**
-     * @return Brand
-     */
     public function getBrand(): Brand
     {
         return $this->brand;
     }
 
-    /**
-     * @param Brand $brand
-     */
     public function setBrand(Brand $brand): void
     {
         $this->brand = $brand;
     }
 
-    /**
-     * @return float|null
-     */
     public function getIndicativeWeight(): ?float
     {
         return $this->indicativeWeight;
     }
 
-    /**
-     * @param float|null $indicativeWeight
-     */
     public function setIndicativeWeight(?float $indicativeWeight): void
     {
         $this->indicativeWeight = $indicativeWeight;

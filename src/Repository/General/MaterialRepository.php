@@ -14,10 +14,6 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class MaterialRepository extends ServiceEntityRepository
 {
-    /**
-     * BrandRepository constructor.
-     * @param ManagerRegistry $registry
-     */
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Material::class);

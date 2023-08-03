@@ -33,73 +33,46 @@ class Color
     #[ORM\Column(type: "string",length: 100)]
     private ?string $panetoneCode;
 
-    /**
-     * @return string
-     */
     public function getId(): string
     {
         return $this->id;
     }
 
-    /**
-     * @return string
-     */
     public function getLabel(): string
     {
         return $this->label;
     }
 
-    /**
-     * @param string $label
-     */
     public function setLabel(string $label): void
     {
         $this->label = $label;
     }
 
-    /**
-     * @return string
-     */
     public function getCode(): string
     {
         return $this->code;
     }
 
-    /**
-     * @param string $code
-     */
     public function setCode(string $code): void
     {
         $this->code = $code;
     }
 
-    /**
-     * @return string|null
-     */
     public function getDominante(): ?string
     {
         return $this->dominante;
     }
 
-    /**
-     * @param string|null $dominante
-     */
     public function setDominante(?string $dominante): void
     {
         $this->dominante = $dominante;
     }
 
-    /**
-     * @return string|null
-     */
     public function getPanetoneCode(): ?string
     {
         return $this->panetoneCode;
     }
 
-    /**
-     * @param string|null $panetoneCode
-     */
     public function setPanetoneCode(?string $panetoneCode): void
     {
         $this->panetoneCode = $panetoneCode;

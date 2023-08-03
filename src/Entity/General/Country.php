@@ -62,9 +62,6 @@ class Country
         return $this->codeAlpha2;
     }
 
-    /**
-     * @param string $codeAlpha2
-     */
     public function setCodeAlpha2(string $codeAlpha2): void
     {
         $this->codeAlpha2 = $codeAlpha2;

@@ -33,57 +33,36 @@ class Family
     #[ORM\OneToMany(mappedBy: "componentFamily", targetEntity: Type::class)]
     private Collection $types;
 
-    /**
-     * @return int
-     */
     public function getId(): int
     {
         return $this->id;
     }
 
-    /**
-     * @return string
-     */
     public function getName(): string
     {
         return $this->name;
     }
 
-    /**
-     * @param string $name
-     */
     public function setName(string $name): void
     {
         $this->name = $name;
     }
 
-    /**
-     * @return string
-     */
     public function getCode(): string
     {
         return $this->code;
     }
 
-    /**
-     * @param string $code
-     */
     public function setCode(string $code): void
     {
         $this->code = $code;
     }
 
-    /**
-     * @return Collection
-     */
     public function getTypes(): Collection
     {
         return $this->types;
     }
 
-    /**
-     * @param Collection $types
-     */
     public function setTypes(Collection $types): void
     {
         $this->types = $types;

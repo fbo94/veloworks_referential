@@ -48,113 +48,71 @@ class Brand
         $this->components = new ArrayCollection();
     }
 
-    /**
-     * @return string
-     */
     public function getId(): string
     {
         return $this->id;
     }
 
-    /**
-     * @param string $id
-     */
     public function setId(string $id): void
     {
         $this->id = $id;
     }
 
-    /**
-     * @return string
-     */
     public function getLabel(): string
     {
         return $this->label;
     }
 
-    /**
-     * @param string $label
-     */
     public function setLabel(string $label): void
     {
         $this->label = $label;
     }
 
-    /**
-     * @return string
-     */
     public function getCode(): string
     {
         return $this->code;
     }
 
-    /**
-     * @param string $code
-     */
     public function setCode(string $code): void
     {
         $this->code = $code;
     }
 
-    /**
-     * @return int
-     */
     public function getCreatedYear(): int
     {
         return $this->createdYear;
     }
 
-    /**
-     * @param int $createdYear
-     */
     public function setCreatedYear(int $createdYear): void
     {
         $this->createdYear = $createdYear;
     }
 
-    /**
-     * @return Country
-     */
     public function getCountry(): Country
     {
         return $this->country;
     }
 
-    /**
-     * @param Country $country
-     */
     public function setCountry(Country $country): void
     {
         $this->country = $country;
     }
 
-    /**
-     * @return Collection
-     */
     public function getBikes(): Collection
     {
         return $this->bikes;
     }
 
-    /**
-     * @param Collection $bikes
-     */
     public function setBikes(Collection $bikes): void
     {
         $this->bikes = $bikes;
     }
 
-    /**
-     * @return Collection
-     */
     public function getComponents(): Collection
     {
         return $this->components;
     }
 
-    /**
-     * @param Collection $components
-     */
     public function setComponents(Collection $components): void
     {
         $this->components = $components;

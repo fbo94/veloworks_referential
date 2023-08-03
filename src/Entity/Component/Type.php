@@ -32,57 +32,36 @@ class Type
     #[ORM\JoinColumn(name: "component_family_id", referencedColumnName: "id")]
     private Family $componentFamily;
 
-    /**
-     * @return int
-     */
     public function getId(): int
     {
         return $this->id;
     }
 
-    /**
-     * @return string
-     */
     public function getName(): string
     {
         return $this->name;
     }
 
-    /**
-     * @param string $name
-     */
     public function setName(string $name): void
     {
         $this->name = $name;
     }
 
-    /**
-     * @return string
-     */
     public function getCode(): string
     {
         return $this->code;
     }
 
-    /**
-     * @param string $code
-     */
     public function setCode(string $code): void
     {
         $this->code = $code;
     }
 
-    /**
-     * @return Family
-     */
     public function getComponentFamily(): Family
     {
         return $this->componentFamily;
     }
 
-    /**
-     * @param Family $componentFamily
-     */
     public function setComponentFamily(Family $componentFamily): void
     {
         $this->componentFamily = $componentFamily;

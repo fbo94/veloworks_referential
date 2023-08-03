@@ -56,9 +56,6 @@ class Type
         return $this->disciplines;
     }
 
-    /**
-     * @param Collection $disciplines
-     */
     public function setDisciplines(Collection $disciplines): void
     {
         $this->disciplines = $disciplines;

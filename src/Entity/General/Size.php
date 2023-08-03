@@ -34,73 +34,46 @@ class Size
     #[ORM\Column(type: "integer")]
     private ?int $maxSizeCm;
 
-    /**
-     * @return int
-     */
     public function getId(): int
     {
         return $this->id;
     }
 
-    /**
-     * @return string
-     */
     public function getCode(): string
     {
         return $this->code;
     }
 
-    /**
-     * @param string $code
-     */
     public function setCode(string $code): void
     {
         $this->code = $code;
     }
 
-    /**
-     * @return string
-     */
     public function getLabel(): string
     {
         return $this->label;
     }
 
-    /**
-     * @param string $label
-     */
     public function setLabel(string $label): void
     {
         $this->label = $label;
     }
 
-    /**
-     * @return int|null
-     */
     public function getMinSizeCm(): ?int
     {
         return $this->minSizeCm;
     }
 
-    /**
-     * @param int|null $minSizeCm
-     */
     public function setMinSizeCm(?int $minSizeCm): void
     {
         $this->minSizeCm = $minSizeCm;
     }
 
-    /**
-     * @return int|null
-     */
     public function getMaxSizeCm(): ?int
     {
         return $this->maxSizeCm;
     }
 
-    /**
-     * @param int|null $maxSizeCm
-     */
     public function setMaxSizeCm(?int $maxSizeCm): void
     {
         $this->maxSizeCm = $maxSizeCm;
